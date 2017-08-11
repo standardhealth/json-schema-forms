@@ -1,0 +1,82 @@
+{
+  "title": "SHR JSON Schema",
+  "type": "object",
+  "required": ["value", "value", "dateOfBirth", "placeOfBirth", "birthSex", "administrativeGender", "race", "ethnicity", "maritalStatus", "mothersMaidenName", "fathersName", "addressUsed", "telecom", "languageUsed"],
+  "properties": {
+    "value": {
+      "title": "Patient Name",
+      "type": "object",
+      "properties": {
+        "value": {"type": "string"}
+      }
+    },
+    "dateOfBirth": {
+      "title": "Date of Birth:",
+      "type": "object",
+      "properties": {
+        "day": {"title": "Day", "type": "number"},
+        "month": {"title": "Month", "enum": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec"], "type": "string"},
+        "year": {"title": "Year", "type": "number"}
+      }
+    },
+    "placeOfBirth": {
+      "title": "Country of Birth",
+      "type": "string"
+    },
+    "birthSex": {
+      "title": "Birth Sex",
+      "enum": ["Male", "Female", "Other", "Unknown"],
+      "type": "string"
+    },
+    "administrativeGender": {
+      "title": "Administrative Gender",
+      "enum": ["Male", "Female", "Other", "Unknown"],
+      "type": "string"
+    },
+    "race": { 
+      "title": "Race",
+      "type": "string"
+    },
+    "ethnicity": {
+      "title": "Ethnicity",
+      "type": "string"
+    },
+    "maritalStatus": {
+      "title": "Marital Status",
+      "enum": ["Annulled", "Divorced", "Interlocutory", "Legally Separated", "Married", "Polygamous", "Never Married", "Domestic Partner", "unmarried", "Widowed"],
+      "type": "string"
+    },
+    "mothersMaidenName": {
+      "title": "Mother's Maiden Name",
+      "type": "string"
+    },
+    "fathersName": {
+      "title": "Father's Full Name",
+      "type": "string"
+    },
+    "addressUsed": {
+      "title": "Address",
+      "type": "object",
+      "properties": {
+        "addressLine": {"title": "Street", "type": "string"},
+        "city": {"title": "City", "type": "string"},
+        "state": {"title": "State", "type": "string"},
+        "country": {"title": "Country", "type": "string"}
+      }
+    },
+    "telecom": {
+      "title": "Telephone",
+      "type": "object",
+      "properties": {
+        "home": {"title": "Home", "type": "string"},
+        "mobile": {"title": "Mobile", "type": "string"}
+      }
+    },
+    "languageUsed": {
+      "title": "Language Used",
+      "type": "string"
+    }
+  }
+}
+
+

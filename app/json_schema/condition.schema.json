@@ -1,0 +1,3 @@
+{
+  "condition": {"title": "Condition", "type": "string", "enum": []}
+}
